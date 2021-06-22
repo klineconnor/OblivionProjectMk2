@@ -147,6 +147,41 @@ public class BattleController : MonoBehaviour
         SetEnemies();
         SpawnPlayers();
         SpawnEnemies();
+        currentState = BattleState.Player;
+    }
+
+    public enum BattleState {Player, Enemy, Run};
+    private BattleState currentState;
+
+    private void Update() 
+    {
+        if (currentState == BattleState.Player)
+        {
+            PlayerTurn();
+        }
+        if (currentState == BattleState.Enemy)
+        {
+            EnemyTurn();
+        }
+        if (currentState == BattleState.Run)
+        {
+            //TODO: return to previous scene
+        }
+    }
+
+    public void setTurnState(BattleState currentState)
+    {
+        this.currentState = currentState;
+    }
+    
+    private void PlayerTurn()
+    {
+        
+    }
+
+    private void EnemyTurn()
+    {
+
     }
 
 }
