@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class BattleData
 {
-    public static EnemyStats enemy1, enemy2, enemy3, enemy4;
+    public static EnemyStats[] enemies;
+
+    public static int previousScene;
+
 }

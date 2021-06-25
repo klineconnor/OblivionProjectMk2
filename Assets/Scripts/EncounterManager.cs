@@ -16,22 +16,22 @@ public class EncounterManager : MonoBehaviour
         if (encounter > threshold) {
             int encounterEnemy = Random.Range(0, PossibleEncounters.Count);
             Debug.Log(encounterEnemy);
-            BattleData.enemy1 = PossibleEncounters[encounterEnemy];
+            BattleData.enemies[0] = PossibleEncounters[encounterEnemy];
             encounterEnemy = Random.Range(-1, PossibleEncounters.Count);
             Debug.Log(encounterEnemy);
             if (encounterEnemy != -1) 
             {
-                BattleData.enemy2 = PossibleEncounters[encounterEnemy];
+                BattleData.enemies[1] = PossibleEncounters[encounterEnemy];
                 encounterEnemy = Random.Range(-1, PossibleEncounters.Count);
                 Debug.Log(encounterEnemy);
                 if (encounterEnemy != -1) 
                 {
-                    BattleData.enemy3 = PossibleEncounters[encounterEnemy];
+                    BattleData.enemies[2] = PossibleEncounters[encounterEnemy];
                     encounterEnemy = Random.Range(-1, PossibleEncounters.Count);
                     Debug.Log(encounterEnemy);
                     if (encounterEnemy != -1) 
                     {
-                        BattleData.enemy4 = PossibleEncounters[encounterEnemy];
+                        BattleData.enemies[3] = PossibleEncounters[encounterEnemy];
                     }
                 }
             }
